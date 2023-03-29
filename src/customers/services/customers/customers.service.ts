@@ -22,15 +22,15 @@ export class CustomersService {
         }
     ]
 
+    getCostumers() {
+        return this.customers
+    }
+
     findCustomerById(id: number) {
         return this.customers.find((customer) => customer.id === id)
     }
 
     createCustomer(customerDto: CreateCustomerDto) {
         this.customers.push(customerDto)
-    }
-
-    getCostumers() {
-        return this.customers
     }
 }
